@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Login from '../components/Login.vue'
+import particles from '../components/Particles.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,16 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home
   },
+    {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+    {
+      path: '/particles',
+      name: 'particles',
+      component: particles
+    },
   {
     path: '/about',
     name: 'About',
