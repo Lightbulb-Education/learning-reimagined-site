@@ -50,7 +50,8 @@ canvas{
     max-width: 40rem;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    padding: 3rem;
-    z-index: 100;
+    padding: 2rem;
+    z-index: 20;
+    min-width: 16rem;
 }
 </style>

@@ -26,7 +26,6 @@
 
         <template slot="end">
             <b-navbar-item tag="div">
-                <div class="buttons">
 
                     <router-link
                             to="/login"
@@ -46,7 +45,7 @@
                             aria-role="menu"
                             v-if="user.loggedIn">
                         <a
-                                class="navbar-item"
+                                class="navbar-item button is-dark"
                                 slot="trigger"
                                 role="button">
                             <div class="mr-5">{{user.data.displayName}}</div>
@@ -59,7 +58,7 @@
                             Logged in as <b>{{user.data.email}}</b>
                         </b-dropdown-item>
                         <hr class="dropdown-divider">
-                        <b-dropdown-item value="logout" aria-role="menuitem" v-on:click="signOut">
+                        <b-dropdown-item class="" value="logout" aria-role="menuitem" v-on:click="signOut">
                             <!--TODO get icon pack-->
                             <b-icon icon="logout"></b-icon>
                             Log out
@@ -68,10 +67,6 @@
                     </b-dropdown>
 
 
-
-
-
-                </div>
             </b-navbar-item>
         </template>
     </b-navbar>

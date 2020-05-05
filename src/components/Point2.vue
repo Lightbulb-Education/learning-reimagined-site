@@ -1,16 +1,28 @@
 <template>
-    <section class="wrapper hero is-black is-fullheight">
-        <h1 class="title is-3">Don’t rely exclusively on technology</h1>
-        <h1 class="title is-1">Technology can</h1>
-        <h1 class="glitch">Fail</h1>
+
+
+    <section class="wrapper section hero is-black is-fullheight ">
+        <div class="container is-fluid">
+            <Number number="2"/>
+            <h1 class="title is-3">Don’t rely exclusively on technology</h1>
+            <h1 class="title is-1">Technology can</h1>
+            <h1 class="glitch">Fail</h1>
+
+        </div>
 
     </section>
 
 </template>
 
 <script>
+    import Number from '@/components/Number.vue'
+
     export default {
-        name: "Point2"
+        name: "Point2",
+        components: {
+            Number,
+        }
+
     }
 </script>
 
@@ -25,22 +37,23 @@
         background-color: #0a0a0a
 
     .wrapper
-        width: 100%
-        height: 100%
-        display: flex
-        justify-content: center
-        align-items: center
+        /*width: 100%*/
+        /*height: 100%*/
+        /*display: flex*/
+        /*justify-content: center*/
+        /*align-items: center*/
 
         h1.glitch
             color: white
-            font-family: sans-serif
+            /*font-family: sans-serif*/
             font-weight: 800
             position: relative
             font-size: 100px
-            padding: 30px
+            margin-top: -1.25rem
+            /*padding: 30px*/
 
         h1.glitch::before, h1.glitch::after
-            padding: 30px
+            /*padding: 30px*/
             color: white
             content: "Fail"
             position: absolute
