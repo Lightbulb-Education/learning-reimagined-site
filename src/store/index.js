@@ -1,15 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import {config} from '../firebaseConfig'
+import * as firebase from "firebase";
 
-Vue.use(Vuex)
+firebase.initializeApp(config)
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+const db = firebase.firestore()
+
+export const store = {
+    db: db,
+};

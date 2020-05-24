@@ -1,32 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <navbar/>
+        <template>
+            <div class="home">
+                <section class="section">
+                    <div class="container">
+                        <router-view/>
+                    </div>
+                </section>
+            </div>
+        </template>
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    /*! bulmaswatch v0.8.1 | MIT License */
+    @import "styles/variables";
 
-#nav {
-  padding: 30px;
+    // Import Bulma's core
+    @import "~bulma/sass/utilities/_all";
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    // Import Bulma and Buefy styles
+    @import "~bulma";
+    @import "~buefy/src/scss/buefy";
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+    @import "styles/overrides";
+
 </style>
+
+<script>
+    import navbar from '@/components/Navbar.vue'
+
+    export default {
+        name: 'app',
+        components: {
+            navbar,
+        }
+    }
+</script>
