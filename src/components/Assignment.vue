@@ -62,6 +62,9 @@
     }
 </script>
 
-<style scoped>
-
+<style>
+    iframe{
+        width: 700px;
+        height: 400px;
+    }
 </style>
