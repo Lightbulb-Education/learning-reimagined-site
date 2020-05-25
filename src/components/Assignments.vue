@@ -1,5 +1,6 @@
 <template>
     <section>
+        <FormModal/>
         <h1 class="title">Your Assignments</h1>
 
         <b-table
@@ -57,6 +58,7 @@
 
 <script>
     import {store} from '../store'
+    import FormModal from "./FormModal";
 
     export default {
         data() {
@@ -96,6 +98,7 @@
                     });
             }
 
-        }
+        },
+        components: {FormModal}
     }
 </script>

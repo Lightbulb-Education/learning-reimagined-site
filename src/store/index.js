@@ -1,4 +1,5 @@
 import * as firebase from "firebase";
+import Cookies from 'js-cookie'
 
 export const config = {
     apiKey: "AIzaSyCPWWZo4OWApgWLuaNc-AbIA-mzmgTkkXQ",
@@ -12,9 +13,11 @@ export const config = {
 };
 
 firebase.initializeApp(config)
-
 const db = firebase.firestore()
+
+const formClosed = Cookies.get('formClosed')
 
 export const store = {
     db: db,
+    formClosed: formClosed
 };
